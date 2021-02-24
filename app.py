@@ -31,7 +31,7 @@ def result():
         else: 
             prediction ='Anaerobic Sports'            
         #return render_template("result.html", prediction = prediction) 
-        return{"prediction":prediction} 
+        return {"prediction":prediction} 
 if __name__ == "__main__":
     app.run(debug=True)
     app.config['TEMPLATES_AUTO_RELOAD'] = True
