@@ -24,9 +24,9 @@ def result():
         _json = request.data
         data_dict = json.loads(_json)
         if data_dict['Gender'].lower() in ('male','m'):
-            data_dict['Gender'] = 1
-        else:
             data_dict['Gender'] = 0
+        else:
+            data_dict['Gender'] = 1
         to_predict_list = list(data_dict.values())
         predict_input_feature = [int(v) for v in to_predict_list]
         result = ValuePredictor(predict_input_feature)         
